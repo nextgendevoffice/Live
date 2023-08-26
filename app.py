@@ -4,11 +4,11 @@ from linebot import LineBotApi
 from linebot.models import TextSendMessage, FlexSendMessage
 
 # ข้อมูลการเข้าถึง API Line
-LINE_CHANNEL_SECRET = os.environ['91ab717cdd0910e3e593de39189c117b']
-LINE_CHANNEL_ACCESS_TOKEN = os.environ['8tR6Z7GkmuSg0Xwj1DGPkeBiSWKiP+D29jNlTejUh9hKVRaeWySDkdTD7D7IlIyHS2KTpq9zj92/jPT73Yo5l+mXH50HhqKQ3uCbF2Q9f9D4JRV14HxjnUP9OzGlPQlvk0Cs06+Yk5sa/e6ygJ9NJQdB04t89/1O/w1cDnyilFU=']
+LINE_CHANNEL_SECRET = os.environ['LINE_CHANNEL_SECRET']
+LINE_CHANNEL_ACCESS_TOKEN = os.environ['LINE_CHANNEL_ACCESS_TOKEN']
 
 # ข้อมูลการเข้าถึง API football-data.org
-FOOTBALL_DATA_API_KEY = os.environ['886eb5facd814d229f3ab17c41323a0d']
+FOOTBALL_DATA_API_KEY = os.environ['FOOTBALL_DATA_API_KEY']
 
 # ฟังก์ชันสำหรับรับข้อความจากผู้ใช้
 def handle_message(event):
