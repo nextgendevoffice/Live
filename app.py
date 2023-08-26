@@ -1,6 +1,9 @@
 import os
 import requests
-from linebot import LineBotApi, WebhookHandler
+from linebot import (
+    LineBotApi,
+    WebhookHandler,
+)
 from linebot.models import TextSendMessage, FlexSendMessage
 
 # ข้อมูลการเข้าถึง API Line
@@ -55,10 +58,10 @@ def main():
     line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 
     # ฟังก์ชันสำหรับรับข้อความจากผู้ใช้
-    line_bot_api.set_webhook(os.environ['LINE_CHANNEL_SECRET'])
-
-    # รอรับข้อความจากผู้ใช้
-    line_bot_api.run()
+    line_bot_api.webhook(
+        WebhookHandler(os.environ['LINE_CHANNEL_SECRET']),
+        on_message=handle_message
+    )
 
 if __name__ == "__main__":
     main()
