@@ -4,7 +4,7 @@ from linebot import LineBotApi
 from linebot.models import TextSendMessage, FlexSendMessage
 
 # ข้อมูลการเข้าถึง API Line
-LINE_CHANNEL_SECRET = os.environ['08c1695f0b7ecc5aba7ba36c10d0f281']
+LINE_CHANNEL_SECRET = os.environ['91ab717cdd0910e3e593de39189c117b']
 LINE_CHANNEL_ACCESS_TOKEN = os.environ['8tR6Z7GkmuSg0Xwj1DGPkeBiSWKiP+D29jNlTejUh9hKVRaeWySDkdTD7D7IlIyHS2KTpq9zj92/jPT73Yo5l+mXH50HhqKQ3uCbF2Q9f9D4JRV14HxjnUP9OzGlPQlvk0Cs06+Yk5sa/e6ygJ9NJQdB04t89/1O/w1cDnyilFU=']
 
 # ข้อมูลการเข้าถึง API football-data.org
