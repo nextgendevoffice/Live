@@ -1,8 +1,8 @@
 import os
 import requests
 from linebot import (
-    LineBotApi,
-    WebhookHandler
+    LineBotApiV3,
+    WebhookHandlerV3,
 )
 from linebot.models import TextSendMessage, FlexSendMessage
 
@@ -55,11 +55,11 @@ def handle_message(event):
 # ฟังก์ชันหลักสำหรับรับข้อความจากผู้ใช้
 def main():
     # เริ่มต้นใช้งาน LineBot
-    line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
+    line_bot_api = LineBotApiV3(LINE_CHANNEL_ACCESS_TOKEN)
 
     # ฟังก์ชันสำหรับรับข้อความจากผู้ใช้
-    line_bot_api.webhook(
-        WebhookHandler(os.environ['LINE_CHANNEL_SECRET']),
+    line_bot_api.setup_webhook(
+        WebhookHandlerV3(os.environ['LINE_CHANNEL_SECRET']),
         on_message=handle_message
     )
 
